@@ -1,0 +1,57 @@
+GIT
+  remote: git://github.com/github/graphql-client.git
+  revision: f38cf8883794d1949cd4ed311a6a3a384b514441
+  specs:
+    graphql-client (0.1.0)
+      activesupport (>= 3.0, < 6.0)
+      graphql (~> 0.18, >= 0.18.11)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (5.0.0.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (~> 0.7)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    colorize (0.8.1)
+    concurrent-ruby (1.0.2)
+    dotenv (2.1.1)
+    graphql (0.18.11)
+    i18n (0.7.0)
+    json (2.0.2)
+    minitest (5.9.0)
+    puma (3.6.0)
+    rack (1.6.4)
+    rack-protection (1.5.3)
+      rack
+    rack-test (0.6.3)
+      rack (>= 1.0)
+    rake (10.5.0)
+    sinatra (1.4.7)
+      rack (~> 1.5)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
+    thread_safe (0.3.5)
+    tilt (2.0.5)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  colorize
+  dotenv
+  graphql (= 0.18.11)
+  graphql-client!
+  json
+  minitest (~> 5.2)
+  puma
+  rack-protection
+  rack-test (~> 0.6)
+  rake (~> 10.0)
+  sinatra (>= 1.4)
+
+BUNDLED WITH
+   1.12.5
