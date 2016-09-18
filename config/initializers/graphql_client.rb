@@ -10,10 +10,10 @@ module API
     # end
   #
 
-  GraphQL::Client.dump_schema(HTTPAdapter, './db/schema.json')
+  GraphQL::Client.dump_schema(HTTPAdapter, './api/schema.json')
 
   Client = GraphQL::Client.new(
-    schema: GraphQL::Client.load_schema('./db/schema.json'),
+    schema: GraphQL::Client.load_schema('./api/schema.json'),
     execute: HTTPAdapter
   )
 end
