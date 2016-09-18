@@ -14,9 +14,15 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    autoprefixer-rails (6.4.1.1)
+      execjs
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     colorize (0.8.1)
     concurrent-ruby (1.0.2)
     dotenv (2.1.1)
+    execjs (2.7.0)
     graphql (0.18.11)
     i18n (0.7.0)
     json (2.0.2)
@@ -28,6 +34,7 @@ GEM
     rack-test (0.6.3)
       rack (>= 1.0)
     rake (10.5.0)
+    sass (3.4.22)
     sinatra (1.4.7)
       rack (~> 1.5)
       rack-protection (~> 1.4)
@@ -41,6 +48,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass
   colorize
   dotenv
   graphql (= 0.18.11)
@@ -51,6 +59,7 @@ DEPENDENCIES
   rack-protection
   rack-test (~> 0.6)
   rake (~> 10.0)
+  sass
   sinatra (>= 1.4)
 
 BUNDLED WITH

@@ -16,6 +16,10 @@ gem 'json'
 # Environment
 gem 'dotenv'
 
+# Sass
+gem 'sass'
+gem 'bootstrap-sass'
+
 group :development do
   gem 'rake', '~> 10.0'
   gem 'minitest', '~> 5.2'
