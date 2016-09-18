@@ -1,4 +1,4 @@
 .env*
 vendor/*
 .bundle
-db/*
+.sass-cache
