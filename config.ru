@@ -5,6 +5,7 @@ require 'bundler'
 require 'tilt/erb'
 require 'logger'
 require 'colorize'
+require 'sass/plugin/rack'
 require 'graphql/client'
 require 'graphql/client/http'
 Bundler.require
