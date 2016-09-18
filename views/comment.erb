@@ -1,0 +1,18 @@
+<div class='media comment'>
+  <div class="media-body">
+    <h4 class="media-heading">
+      <%= comment.user.name %>
+      <small>
+        <%= comment.created_at %>
+      </small>
+    </h4>
+    <div class="comment-body">
+      <%= comment.body %>
+    </div>
+    <div class="post-meta">
+       <span class="counters">
+         <%= comment.votes_count %>
+       </span>
+    </div>
+  </div>
+</div>
