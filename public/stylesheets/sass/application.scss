@@ -1,0 +1,13 @@
+
+/* Assets to compiled */
+@import 'fonts';
+@import 'font-awesome.min';
+@import "bootstrap-sprockets";
+@import 'bootstrap-custom';
+@import 'all';
+@import 'votes';
+@import 'sessions';
+@import 'comments';
+
+// Account for differences between Rails and Webpack Sass code.
+$rails: false;
