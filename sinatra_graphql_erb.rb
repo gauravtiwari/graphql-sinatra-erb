@@ -1,3 +1,5 @@
+require 'sass/plugin/rack'
+
 IndexQuery = API::Client.parse <<-'GRAPHQL'
   query {
     root {
@@ -80,6 +82,7 @@ class SinatraGraphqlErb < Sinatra::Base
   use Rack::Session::Cookie, secret: 'super_secret_client_key'
   use Rack::Protection
   use Rack::Protection::RemoteReferrer
+  use Sass::Plugin::Rack
 
   private
 
