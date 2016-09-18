@@ -11,6 +11,25 @@
           <%= post.excerpt %>
         </p>
       </div>
+      <div class="tags">
+        <% post.tags.each do |tag| %>
+          <span class="post-tag"><%= tag %></span>
+        <% end %>
+      </div>
+      <p class="post-meta">
+        <span class="count votes">
+          Votes: <%= post.votes_count %>
+        </span>
+        <span class="author">
+          <span>|</span> Posted by:<em><%= post.user.name %></em>
+        </span>
+        <span class="date">
+          <span>|</span> <%= post.created_at %>
+        </span>
+        <span class="count comments">
+          <span>|</span> Comments: <%= post.comments_count %>
+        </span>
+      </p>
     </div>
   <% end %>
 </div>

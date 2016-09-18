@@ -11,16 +11,16 @@
        <div class="post-preview show">
          <div class="post-meta">
            <span class="counters">
-            <%= post.votes_count %>
+            Votes: <%= post.votes_count %>
            </span>
            <span class="author">
-             Posted by: <em><%= post.user.name %></em>
+             <span>|</span>Posted by: <em><%= post.user.name %></em>
            </span>
            <span class="date">
-            <%= post.created_at %>
+            <span>|</span> <%= post.created_at %>
            </span>
            <span class="counters">
-             Comments: <%= post.comments_count %>
+             <span>|</span> Comments: <%= post.comments_count %>
            </span>
          </div>
        </div>
