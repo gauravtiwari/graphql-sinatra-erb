@@ -18,6 +18,9 @@ gem 'json'
 # Environment
 gem 'dotenv'
 
+# Turbolinks
+gem 'turbolinks-source'
+
 # Sass
 gem 'sass'
 gem 'bootstrap-sass'
