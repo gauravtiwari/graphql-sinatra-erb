@@ -1,22 +1,79 @@
 IndexQuery = API::Client.parse <<-'GRAPHQL'
   query {
-    all_posts {
-      id
-      title
-      body
+    root {
+      id,
+      tags,
+      posts(first: 10) {
+        edges {
+          node {
+            id,
+            title,
+            slug,
+            excerpt,
+            voted,
+            user_id,
+            created_at,
+            comments_count,
+            tags,
+            votes_count,
+            user {
+              name,
+            }
+          }
+        }
+        pageInfo {
+          hasNextPage
+        }
+      }
     }
   }
 GRAPHQL
 
 ShowQuery = API::Client.parse <<-'GRAPHQL'
   query($id: ID!) {
-    post(id: $id) {
+    node(id: $id) {
       id
-      title
-      body
+      ... on Post {
+        id,
+        title,
+        slug,
+        body,
+        voted,
+        user_id,
+        created_at,
+        comments_count,
+        tags,
+        votes_count,
+        user {
+          name,
+        }
+        comments(first: 10, order: "-id") {
+          edges {
+            node {
+              id,
+              votes_count,
+              voted,
+              id,
+              body,
+              is_owner,
+              votes_count,
+              voted,
+              created_at,
+              user {
+                name,
+              },
+            }
+          },
+          pageInfo {
+            hasNextPage
+          }
+        }
+      }
     }
   }
 GRAPHQL
+
+
 
 class SinatraGraphqlErb < Sinatra::Base
   set public_folder: 'public', static: true
@@ -48,14 +105,16 @@ class SinatraGraphqlErb < Sinatra::Base
   get '/' do
     data = query IndexQuery
     erb :index, locals: {
-      posts: data.all_posts
+      posts: data.root.posts
     }
   end
+
 
   get '/posts/:id' do
     data = query ShowQuery, id: params["id"]
     erb :show, locals: {
-      post: data.post
+      post: data.node,
+      comments: data.node.comments
     }
   end
 end

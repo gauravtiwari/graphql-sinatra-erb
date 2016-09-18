@@ -7,3 +7,15 @@
 <p>
   <%= post.body %>
 </p>
+
+<h1>Comments</h1>
+<hr />
+
+<% comments.each_node do |comment| %>
+  <small>
+    <%= comment.user.name %>
+  </small>
+  <p>
+    <%= comment.body %>
+  </p>
+<% end %>
