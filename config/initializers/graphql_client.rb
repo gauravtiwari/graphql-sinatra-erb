@@ -1,11 +1,14 @@
 module API
-  HTTPAdapter = GraphQL::Client::HTTP.new(ENV['API_URL']) do
-    def headers(context)
-      {
-        "Authorization" => "Bearer #{ENV['ACCESS_TOKEN']}"
-      }
-    end
-  end
+  HTTPAdapter = GraphQL::Client::HTTP.new(ENV['API_URL'])
+
+  #
+    # Pass block to send auth token
+    # def headers(context)
+    #   {
+    #     "Authorization" => "Bearer #{ENV['ACCESS_TOKEN']}"
+    #   }
+    # end
+  #
 
   GraphQL::Client.dump_schema(HTTPAdapter, './db/schema.json')
 
