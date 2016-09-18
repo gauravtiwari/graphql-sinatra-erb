@@ -1,13 +1,16 @@
-<h2>Posts List</h2>
-
-<% posts.each_node do |post| %>
-  <a href="/posts/<%= post.id %>">
-    <h1>
-      <%= post.title %>
-    </h1>
-  </a>
-
-  <p>
-    <%= post.excerpt %>
-  </p>
-<% end %>
+<div class="col-lg-7 col-md-7">
+  <% posts.each_node do |post| %>
+    <div class="post-preview">
+      <a href="/posts/<%= post.id %>">
+        <h2 class="post-title">
+          <%= post.title %>
+        </h2>
+      </a>
+      <div class="post-body">
+        <p>
+          <%= post.excerpt %>
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>
