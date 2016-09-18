@@ -8,53 +8,11 @@
         <div>
           <%= post.body %>
         </div>
-       <div class="post-preview show">
-         <div class="post-meta">
-           <span class="counters">
-            Votes: <%= post.votes_count %>
-           </span>
-           <span class="author">
-             <span>|</span>Posted by: <em><%= post.user.name %></em>
-           </span>
-           <span class="date">
-            <span>|</span> <%= post.created_at %>
-           </span>
-           <span class="counters">
-             <span>|</span> Comments: <%= post.comments_count %>
-           </span>
-         </div>
-       </div>
+        <div class="post-preview show">
+          <%= erb :meta, locals: { post: post } %>
+        </div>
      </div>
    </div>
  </div>
-
- <div class="comments-container">
-  <div class="container">
-   <div class="row">
-     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <h1> Comments </h1>
-      <% comments.each_node do |comment| %>
-        <div class='media comment'>
-        <div class="media-body">
-          <h4 class="media-heading">
-            <%= comment.user.name %>
-            <small>
-              <%= comment.created_at %>
-            </small>
-          </h4>
-          <div class="comment-body">
-            <%= comment.body %>
-          </div>
-          <div class="post-meta">
-             <span class="counters">
-               <%= comment.votes_count %>
-             </span>
-          </div>
-        </div>
-        </div>
-      <% end %>
-     </div>
-     </div>
-   </div>
- </div>
+ <%= erb :comments, locals: { comments: post.comments } %>
 </article>

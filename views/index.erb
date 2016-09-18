@@ -1,35 +1,9 @@
-<div class="col-lg-7 col-md-7">
-  <% posts.each_node do |post| %>
-    <div class="post-preview">
-      <a href="/posts/<%= post.id %>">
-        <h2 class="post-title">
-          <%= post.title %>
-        </h2>
-      </a>
-      <div class="post-body">
-        <p>
-          <%= post.excerpt %>
-        </p>
-      </div>
-      <div class="tags">
-        <% post.tags.each do |tag| %>
-          <span class="post-tag"><%= tag %></span>
-        <% end %>
-      </div>
-      <p class="post-meta">
-        <span class="count votes">
-          Votes: <%= post.votes_count %>
-        </span>
-        <span class="author">
-          <span>|</span> Posted by:<em><%= post.user.name %></em>
-        </span>
-        <span class="date">
-          <span>|</span> <%= post.created_at %>
-        </span>
-        <span class="count comments">
-          <span>|</span> Comments: <%= post.comments_count %>
-        </span>
-      </p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-7 col-md-7">
+      <% posts.each_node do |post| %>
+        <%= erb :post_preview, locals: { post: post } %>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 </div>

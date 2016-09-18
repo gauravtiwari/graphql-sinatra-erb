@@ -1,0 +1,14 @@
+<div class="post-meta">
+  <span class="count votes">
+    Votes: <%= post.votes_count %>
+  </span>
+  <span class="author">
+    <span>|</span> Posted by:<em><%= post.user.name %></em>
+  </span>
+  <span class="date">
+    <span>|</span> <%= post.created_at %>
+  </span>
+  <span class="count comments">
+    <span>|</span> Comments: <%= post.comments_count %>
+  </span>
+</div>

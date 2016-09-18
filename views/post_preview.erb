@@ -1,0 +1,16 @@
+<div class="post-preview">
+  <a href="/posts/<%= post.id %>">
+    <h2 class="post-title">
+      <%= post.title %>
+    </h2>
+  </a>
+
+  <div class="post-body">
+    <p>
+      <%= post.excerpt %>
+    </p>
+  </div>
+
+  <%= erb :tags, locals: { tags: post.tags }%>
+  <%= erb :meta, locals: { post: post } %>
+</div>
