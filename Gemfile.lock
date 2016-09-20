@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/github/graphql-client.git
-  revision: f38cf8883794d1949cd4ed311a6a3a384b514441
+  revision: ad6b582e9d57b7c5d8203e69be57c1e808351969
   specs:
     graphql-client (0.1.0)
       activesupport (>= 3.0, < 6.0)
