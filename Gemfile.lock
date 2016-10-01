@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/github/graphql-client.git
-  revision: ad6b582e9d57b7c5d8203e69be57c1e808351969
+  revision: 8a6ec748cb4580c09f308376a1d5d1eecf134b98
   specs:
-    graphql-client (0.1.0)
+    graphql-client (0.1.1)
       activesupport (>= 3.0, < 6.0)
       graphql (~> 0.18, >= 0.18.11)
 
@@ -14,7 +14,7 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    autoprefixer-rails (6.4.1.1)
+    autoprefixer-rails (6.5.0.1)
       execjs
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
@@ -26,7 +26,7 @@ GEM
     graphql (0.18.11)
     i18n (0.7.0)
     json (2.0.2)
-    minitest (5.9.0)
+    minitest (5.9.1)
     puma (3.6.0)
     rack (1.6.4)
     rack-protection (1.5.3)
